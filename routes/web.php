@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home',[DasboardController::class,'index']);
+Route::POST('/auth',[loginController::class,'auth']);
 Route::get('/Form_Pengajuan_Cuti',[DasboardController::class,'Form_Pengajuan_CUti']);
 Route::get('/dashboard_hrd',[DasboardController::class,'dashboard_hrd']);
 Route::get('/dashboard_approved',[DasboardController::class,'dashboard_approved']);
