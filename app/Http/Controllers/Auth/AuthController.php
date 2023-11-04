@@ -26,6 +26,7 @@ class AuthController extends Controller
             return back()->withErrors(['error' => 'Login gagal, cek kembali email dan password Anda.']);
         } else {
             return redirect('/home');
+            return $pengguna;
         }
     }
 
