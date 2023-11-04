@@ -20,5 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [DashboardController::class, 'index']);
+Route::POST('/auth', [LoginController::class, 'auth']);
 Route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']);
 Route::get('/dashboard_Hr', [DashboardController::class, 'dashboard_Hr']);
