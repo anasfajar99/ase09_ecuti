@@ -34,21 +34,23 @@
     <!-- ============================================================== -->
     <div class="splash-container">
         <div class="card ">
-            <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="../assets/images/logo.png" alt="logo"></a><span class="splash-description">welcome dan please login e-cuti</span></div>
+            <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="../assets/images/logo.png" alt="logo"></a><span class="splash-description">welcome and please login e-cuti</span></div>
             <div class="card-body">
-                <form action="{{'/home'}}" method="GET">
+                <form action="{{'/auth'}}" method="POST">
+                @csrf
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off" name="username">
+                        <input type="hidden" name="token" value="{{ csrf_token()}}"/>
                     </div>
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
                         <label class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button><br>
                     <a href="{{'/dashboard_Hr'}}"><button type="button" class="btn btn-primary btn-lg btn-block">Sign in HR</button></a>
                 </form>
             </div>
