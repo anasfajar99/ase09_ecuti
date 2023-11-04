@@ -9,8 +9,4 @@ class loginController extends Controller
     public function index(){
         return view('login_karyawan');
     }
-
-    public function logout(){
-        return view('logout');
-    }
 }
