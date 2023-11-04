@@ -20,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [DashboardController::class,'index']);
-Route::get('/form_ajukan_cuti', [DashboardController::class,'form_ajukan_cuti']);
 Route::get('/dashboard_HR', [DashboardController::class,'dashboard_HR']);
+Route::get('/form_ajukan_cuti', [DashboardController::class,'form_ajukan_cuti']);
 Route::get('/dashboard_approved', [DashboardController::class,'dashboard_approved']);
 Route::get('/dashboard_reject', [DashboardController::class,'dashboard_reject']);
+Route::POST('/auth', [LoginController::class,'auth']);

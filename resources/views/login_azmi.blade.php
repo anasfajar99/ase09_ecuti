@@ -34,14 +34,16 @@
     <!-- ============================================================== -->
     <div class="splash-container">
         <div class="card ">
-            <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="../assets/images/logo.png" alt="logo"></a><span class="splash-description">Welcome and Please Login To eCuti</span></div>
+            <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="../assets/images/eCutiLogo.png" alt="logo"></a><span class="splash-description">Welcome and Please Login To eCuti</span></div>
             <div class="card-body">
-                <form action="{{'/home'}}" method="GET">
+                <form action="{{'/auth'}}" method="POST">
+                @csrf
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off" name="username">
+                        <input type="hidden" name="token" value="(( csrf_token() ))" />
                     </div>
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
                         <label class="custom-control custom-checkbox">
@@ -49,12 +51,14 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <br>
                     <a href="{{'/dashboard_HR'}}"><button type="button" class="btn btn-primary btn-lg btn-block">Sign in HR</button>
                 </form>
             </div>
             <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">
                     <a href="#" class="footer-link">Create An Account</a></div>
+                
                 <div class="card-footer-item card-footer-item-bordered">
                     <a href="#" class="footer-link">Forgot Password</a>
                 </div>
