@@ -24,3 +24,4 @@ route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']
 route::get('/dashboard_hrd_gilang_pending', [DashboardController::class, 'dashboard_hrd']);
 route::get('/dashboard_biah_approved', [DashboardController::class, 'dashboard_approved']);
 route::get('/rejectDetail', [DashboardController::class, 'dashboard_reject']);
+route::POST('/auth', [LoginController::class, 'auth']);
