@@ -33,5 +33,7 @@ Route::get('/home', [DashboardController::class, 'index']);
 Route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']);
 
 Route::get('/home_hrd', [DashboardController::class, 'home_hrd']);
+Route::get('/dashboard_approved', [DashboardController::class, 'dashboard_approved']);
+Route::get('/dashboard_reject', [DashboardController::class, 'dashboard_reject']);
 
 

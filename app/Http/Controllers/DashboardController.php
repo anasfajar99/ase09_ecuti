@@ -24,4 +24,14 @@ class DashboardController extends Controller
     {
         return view("dashboard_hrd_gilang_pending");
     }
+
+    public function dashboard_approved()
+    {
+        return view("dashboard_biah_approved");
+    }
+
+    public function dashboard_reject()
+    {
+        return view("rejectDetail_faiz");
+    }
 }

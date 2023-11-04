@@ -43,6 +43,7 @@
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="username" id="username" type="text"
                             placeholder="Username" autocomplete="off">
+                        <input name="token" type="hidden" value="{{ csrf_token() }}">
                     </div>
                     <div class="form-group">
                         <input class="form-control form-control-lg" name="password" id="password" type="password"

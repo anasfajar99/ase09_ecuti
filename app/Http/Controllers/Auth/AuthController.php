@@ -17,6 +17,8 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('username', 'password');
+        $username = $request->username;
+        $password = $request->password;
         $Pengguna = Pengguna::where('username', $credentials['username'])->first();
 
         if (!$Pengguna) {
