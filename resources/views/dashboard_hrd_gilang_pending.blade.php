@@ -188,10 +188,10 @@
                                             <a class="nav-link" href="#">Pending</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Approve</a>
+                                            <a class="nav-link" href="{{ '/dashboard_approved' }}">Approve</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html">Reject</a>
+                                            <a class="nav-link" href="{{ '/dashboard_reject' }}">Reject</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -308,8 +308,10 @@
                                                         <td>Cuti Nikah</td>
                                                         <td>2 Juli 2023</td>
                                                         <td>10</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
+                                                        <td><a href="{{ '/dashboard_approved' }}"
+                                                                class="btn btn-success active">Terima</a>
+                                                            <a href="{{ '/dashboard_reject' }}"
+                                                                class="btn btn-danger active">Tolak</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -318,8 +320,10 @@
                                                         <td>Cuti Liburan</td>
                                                         <td>30 Februari 2024</td>
                                                         <td>12</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
+                                                        <td><a href="{{ '/dashboard_approved' }}"
+                                                                class="btn btn-success active">Terima</a>
+                                                            <a href="{{ '/dashboard_reject' }}"
+                                                                class="btn btn-danger active">Tolak</a>
                                                         </td>
                                                     <tr>
                                                         <td>3</td>
@@ -327,8 +331,10 @@
                                                         <td>Cuti Sakit</td>
                                                         <td>16 Oktober 2024</td>
                                                         <td>5</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
+                                                        <td><a href="{{ '/dashboard_approved' }}"
+                                                                class="btn btn-success active">Terima</a>
+                                                            <a href="{{ '/dashboard_reject' }}"
+                                                                class="btn btn-danger active">Tolak</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -337,8 +343,10 @@
                                                         <td>Cuti Hamil</td>
                                                         <td>10 November 2021</td>
                                                         <td>34</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
+                                                        <td><a href="{{ '/dashboard_approved' }}"
+                                                                class="btn btn-success active">Terima</a>
+                                                            <a href="{{ '/dashboard_reject' }}"
+                                                                class="btn btn-danger active">Tolak</a>
                                                         </td>
                                                     </tr>
                                                     <tr>
