@@ -50,11 +50,11 @@
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In Pegawai</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign In</button>
                 </form>
-                <form action="{{ '/dashboard_hrd_gilang_pending' }}" method="GET">
+                <!-- <form action="{{ '/dashboard_hrd_gilang_pending' }}" method="GET">
                     <button type="submit" class="mt-3 btn btn-primary btn-lg btn-block">Sign In HRD</button>
-                </form>
+                </form> -->
             </div>
             <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">

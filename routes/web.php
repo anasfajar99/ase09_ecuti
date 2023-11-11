@@ -25,3 +25,4 @@ route::get('/dashboard_hrd_gilang_pending', [DashboardController::class, 'dashbo
 route::get('/dashboard_biah_approved', [DashboardController::class, 'dashboard_approved']);
 route::get('/rejectDetail', [DashboardController::class, 'dashboard_reject']);
 route::POST('/auth', [LoginController::class, 'auth']);
+route::get('/logout', [LoginController::class, 'logout']);
