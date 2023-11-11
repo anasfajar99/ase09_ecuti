@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index(){
-        return view('dasboard_yogi_karyawan');
+    public function index(Request $request){
+        if ($request->session()->has('name')) {
+            return view('dasboard_yogi_karyawan');
+        }
     }
 
     public function form_ajukan_cuti(){
