@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\login_adzmi    ;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [DashboardController::class, 'index']);
-Route::get('/auth', [LoginController::class, 'auth']);
+Route::POST('/auth', [LoginController::class, 'auth']);
 Route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']);
 Route::get('/dashboard_Hr', [DashboardController::class, 'dashboard_Hr']);
-Route::get('/dashboard_approved', [DashboardController::class, 'dashboard_approved']);
-Route::get('/dashboard_reject', [DashboardController::class, 'dashboard_reject']);
+Route::get('/logout', [DashboardController::class, 'logout']);
 // Route::get('/home', [login_adzmi::class, 'index']);

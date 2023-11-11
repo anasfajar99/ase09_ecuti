@@ -51,7 +51,6 @@
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-                    <a href="{{'/dashboard_Hr'}}"><button type="button" class="btn btn-primary btn-lg btn-block">Sign in HR</button>
                 </form>
             </div>
             <div class="card-footer bg-white p-0  ">
