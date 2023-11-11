@@ -6,9 +6,13 @@ use Illuminate\Http\Request;
 
 class DasboardController extends Controller
 {
-    public function index(){
-        return view('dasboard');
-    }
+    
+    public function index(Request $request){
+        if($request->session()->has('name')){
+            return view('Dasboard');
+        }
+     }
+    
     
     public function Form_Pengajuan_Cuti(){
         return view('Form_Pengajuan_Cuti');

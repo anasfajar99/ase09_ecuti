@@ -50,7 +50,7 @@
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                   
                      <a href="{{'/dashboard_hrd'}}"><button type="button" class="btn btn-primary btn-lg btn-block">Sign in</button></a>
                 </form>
             </div>
