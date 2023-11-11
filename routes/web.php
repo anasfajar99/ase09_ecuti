@@ -25,8 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AuthController::class, 'index']);
 Route::post('/proses', [AuthController::class, 'login']);
 
-// Logout
-// Route::post('/logout', 'Auth\AuthController@logout');
+Route::get('/logout', [AuthController::class, 'logout']);
 
 // =============================================================
 Route::get('/home', [DashboardController::class, 'index']);

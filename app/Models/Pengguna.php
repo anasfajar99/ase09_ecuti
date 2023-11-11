@@ -8,16 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengguna extends Model
 {
-    protected $table = 'tb_account';
+    protected $table = 'users';
 
     protected $fillable = [
-        'username',
+        'id',
+        'name',
+        'email',
+        'email_verified_at',
         'password',
-        'gmail',
-        'no_hp',
+        'remember_token',
+        'akses',
         'created_at',
         'updated_at',
-        'alamat',
-        'id',
     ];
 }

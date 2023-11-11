@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Permintaan;
 use App\events;
 
+
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        // $karyawan = Permintaan::all();
-
-        return view("dashboard_yogi_karyawan");
+        if ($request->session()->has("name")) {
+            return view("dashboard_yogi_karyawan");
+        }
     }
 
     public function form_ajukan_cuti()

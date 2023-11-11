@@ -41,8 +41,8 @@
                 <form method="POST" action="{{ '/proses' }}">
                     @csrf
                     <div class="form-group">
-                        <input class="form-control form-control-lg" name="username" id="username" type="text"
-                            placeholder="Username" autocomplete="off">
+                        <input class="form-control form-control-lg" name="email" id="email" type="text"
+                            placeholder="Email" autocomplete="off">
                         <input name="token" type="hidden" value="{{ csrf_token() }}">
                     </div>
                     <div class="form-group">
@@ -55,11 +55,8 @@
                                 class="custom-control-label">Remember Me</span>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in Karyawan</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
                 </form>
-                <br>
-                <a href="{{ '/home_hrd' }}"><button class="btn btn-primary btn-lg btn-block">Sign in
-                        HRD</button></a>
             </div>
             <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">
