@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CutiController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,5 +35,6 @@ Route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']
 Route::get('/home_hrd', [DashboardController::class, 'home_hrd']);
 Route::get('/dashboard_approved', [DashboardController::class, 'dashboard_approved']);
 Route::get('/dashboard_reject', [DashboardController::class, 'dashboard_reject']);
+Route::post('/inputCuti', [CutiController::class, 'inputCuti']);
 
 

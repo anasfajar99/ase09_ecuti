@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Listcuti;
 use Illuminate\Http\Request;
 use App\Models\Permintaan;
+// use App\Models\Listcuti;
 use App\events;
+use DB;
 
 
 class DashboardController extends Controller
@@ -12,6 +15,7 @@ class DashboardController extends Controller
     public function index(Request $request)
     {
         if ($request->session()->has("name")) {
+            $data = Listcuti::all();
             return view("dashboard_yogi_karyawan");
         }
     }

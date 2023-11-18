@@ -12,7 +12,6 @@
                     <li class="nav-divider">
                         Menu
                     </li>
-
                     @if (session('akses') == 1)
                         <li class="nav-item">
                             <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-10"
@@ -30,7 +29,7 @@
                             <div id="submenu-2" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Pending</a>
+                                        <a class="nav-link" href="{{ '/home_hrd' }}">Pending</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ '/dashboard_approved' }}">Approve</a>
@@ -50,7 +49,7 @@
                             <div id="submenu-2" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Pending</a>
+                                        <a class="nav-link" href="{{ '/home_hrd' }}">Pending</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ '/dashboard_approved' }}">Approve</a>
