@@ -1,32 +1,5 @@
 @extends('main')
 @section('content')
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
-                    <!-- ============================================================== -->
-                    <!-- pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <div class="page-header">
-                                <h2 class="pageheader-title">Dashboard Karyawan </h2>
-                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                                <div class="page-breadcrumb">
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ============================================================== -->
-                    <!-- end pageheader  -->
-                    <!-- ============================================================== -->
-                    <div class="ecommerce-widget">
-
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
@@ -88,11 +61,11 @@
                                                         <td>
                                                             <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Handaru </td>
+                                                        <td>QeizyL</td>
                                                         <td>id000001 </td>
                                                         <td>20 September 2023</td>
                                                         <td>6</td>
-                                                        <td>Istri Melahirkan</td>
+                                                        <td>Liburan</td>
 
                                                         <td><span class="badge-dot badge-brand mr-1"></span> </td>
                                                     </tr>
@@ -101,11 +74,11 @@
                                                         <td>
                                                             <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Yogi </td>
+                                                        <td>VioLenza</td>
                                                         <td>id000002 </td>
                                                         <td>12 Oktober 2023</td>
                                                         <td>4</td>
-                                                        <td>pindah Rumah</td>
+                                                        <td>Cuti Sakit</td>
                                                         
                                                         <td><span class="badge-dot badge-success mr-1"></span> </td>
                                                     </tr>
@@ -114,11 +87,11 @@
                                                         <td>
                                                             <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Faiz</td>
+                                                        <td>Ramon</td>
                                                         <td>id000003 </td>
                                                         <td>23 Februari 2023</td>
                                                         <td>3</td>
-                                                        <td>Ada acara keluarga</td>
+                                                        <td>Cuti Ayah</td>
                                                         
                                                         <td><span class="badge-dot badge-success mr-1"></span> </td>
                                                     </tr>
@@ -127,11 +100,11 @@
                                                         <td>
                                                             <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
                                                         </td>
-                                                        <td>Gilang </td>
+                                                        <td>Senja</td>
                                                         <td>id000004 </td>
                                                         <td>3 Januari 2023</td>
                                                         <td>5</td>
-                                                        <td>Sakit</td>
+                                                        <td>Cuti Melahirkan</td>
 
                                                         <td><span class="badge-dot badge-success mr-1"></span></td>
                                                     </tr>
@@ -189,13 +162,6 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
         </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
     </div>
 @endsection
