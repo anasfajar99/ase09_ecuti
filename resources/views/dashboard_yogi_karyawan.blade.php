@@ -1,8 +1,6 @@
 @extends('main')
 @section('content')
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
+
                     <!-- ============================================================== -->
                     <!-- pageheader  -->
                     <!-- ============================================================== -->
@@ -39,7 +37,6 @@
                                             <span><i class=></i></span><span>/Tahun</span>
                                         </div>
                                     </div>
-                                    <div id="sparkline-revenue"></div>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -53,7 +50,6 @@
                                             <span><i class=></i></span><span>/Tahun</span>
                                         </div>
                                     </div>
-                                    <div id="sparkline-revenue2"></div>
                                 </div>
                             </div>
                         </div>
@@ -188,14 +184,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- ============================================================== -->
-            <!-- end footer -->
-            <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
-    </div>
+
 @endsection

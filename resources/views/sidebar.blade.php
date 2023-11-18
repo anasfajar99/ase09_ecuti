@@ -11,7 +11,7 @@
                                 Menu
                             </li>
 
-                            @if (session('akses') == 1)
+                            @if (session('akses') == 3)
                             <li class="nav-item">
                                 <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-user"></i>Dasboard</a>
                                 <li class="nav-item">
@@ -36,7 +36,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            @elseif (session('akses') == 3)
+                            @elseif (session('akses') == 1)
                             <li class="nav-item active">
                                 <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
                                     data-target="#submenu-2" aria-controls="submenu-2"><i
