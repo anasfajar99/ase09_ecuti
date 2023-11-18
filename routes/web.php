@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\CutiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,4 @@ route::get('/dashboard_biah_approved', [DashboardController::class, 'dashboard_a
 route::get('/rejectDetail', [DashboardController::class, 'dashboard_reject']);
 route::POST('/auth', [LoginController::class, 'auth']);
 route::get('/logout', [LoginController::class, 'logout']);
+route::POST('/inputCuti', [CutiController::class, 'inputCuti']);
