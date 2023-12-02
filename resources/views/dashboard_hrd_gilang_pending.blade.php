@@ -80,60 +80,36 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Histori Cuti</h5>
+                                    <h5 class="card-header">Pending Cuti</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead class="bg-light" align="center">
                                                     <tr class="border-0">
-                                                        <th class="border-0">#</th>
-                                                        <th class="border-10">Nama Karyawan</th>
-                                                        <th class="border-0">Alasan</th>
-                                                        <th class="border-0">Tanggal Cuti</th>
+                                                        <th class="border-0">No</th>
+                                                        <th class="border-10">Tanggal Pengajuan</th>
+                                                        <th class="border-0">Tanggal Mulai Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
+                                                        <th class="border-0">Alasan</th>
                                                         <th class="border-0">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody align="center">
+                                                    @foreach($data as $d)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>Gilang Bangun Ardiansyah</td>
-                                                        <td>Cuti Nikah</td>
-                                                        <td>2 Juli 2023</td>
-                                                        <td>10</td>
-                                                        <td><a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
+                                                        <td>{{$loop->iteration}}</td>
+                                                        <td>
+                                                            {{$d->created_at}}
+                                                        </td>
+                                                        <td>{{$d->tanggal_mulai_cuti}}</td>
+                                                        <td>{{$d->lama}}</td>
+                                                        <td>{{$d->alasan}}</td>
+                                                        <td>
+                                                            <a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
                                                             <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Tolak</a>
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Faiz Restu Cahyadi</td>
-                                                        <td>Cuti Liburan</td>
-                                                        <td>30 Februari 2024</td>
-                                                        <td>12</td>
-                                                        <td><a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Adzmi Rifal Setyawan</td>
-                                                        <td>Cuti Sakit</td>
-                                                        <td>16 Oktober 2024</td>
-                                                        <td>5</td>
-                                                        <td><a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Siti Robiah</td>
-                                                        <td>Cuti Hamil</td>
-                                                        <td>10 November 2021</td>
-                                                        <td>34</td>
-                                                        <td><a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    </tr>
+                                                    </tr>     
+                                                    @endforeach
                                                     <tr>
                                                         <td colspan="9"><a href="#"
                                                                 class="btn btn-outline-light float-right">View

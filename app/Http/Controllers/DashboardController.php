@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\listcuti;
 
 class DashboardController extends Controller
-{
+{   
     /**
      * Show the form for creating the resource.
      */
@@ -56,7 +57,8 @@ class DashboardController extends Controller
 
     public function index(Request $request){
         if ($request->session()->has('name')){
-            return view('dashboard_yogi');
+            $data = Listcuti::get();
+            return view('dashboard_yogi',compact('data'));
         }
     }
 
@@ -64,8 +66,11 @@ class DashboardController extends Controller
         return view('Form_Pengajuan_Cuti_fandi');
     }
 
-    public function dashboard_hrd(){
-        return view('dashboard_hrd_gilang_pending');
+    public function dashboard_hrd(Request $request){
+        if ($request->session()->has('name')){
+            $data = Listcuti::get();
+            return view('dashboard_hrd_gilang_pending',compact('data'));
+        }
     }
 
     public function dashboard_reject(){
