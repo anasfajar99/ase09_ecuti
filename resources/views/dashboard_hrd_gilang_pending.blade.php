@@ -87,6 +87,7 @@
                                                 <thead class="bg-light" align="center">
                                                     <tr class="border-0">
                                                         <th class="border-0">No</th>
+                                                        <th class="border-0">Nama Karyawan</th>
                                                         <th class="border-10">Tanggal Pengajuan</th>
                                                         <th class="border-0">Tanggal Mulai Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
@@ -98,6 +99,7 @@
                                                     @foreach($data as $d)
                                                     <tr>
                                                         <td>{{$loop->iteration}}</td>
+                                                        <td>{{$d->nama_karyawan}}</td>
                                                         <td>
                                                             {{$d->created_at}}
                                                         </td>
@@ -105,8 +107,8 @@
                                                         <td>{{$d->lama}}</td>
                                                         <td>{{$d->alasan}}</td>
                                                         <td>
-                                                            <a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Terima</a>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Tolak</a>
+                                                            <a href="{{'/dashboard_biah_approved'}}" class="btn btn-success active">Approved</a>
+                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
                                                         </td>
                                                     </tr>     
                                                     @endforeach

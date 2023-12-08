@@ -73,11 +73,21 @@ class DashboardController extends Controller
         }
     }
 
-    public function dashboard_reject(){
-        return view('rejectDetail_faiz');
+    public function dashboard_approved(Request $request){
+            $data = Listcuti::where('status',1)->get();
+            return view('dashboard_biah_approved',compact('data'));
     }
 
-    public function dashboard_approved(){
-        return view('dashboard_biah_approved');
-    }
+    public function dashboard_reject(Request $request){
+        $data = Listcuti::where('status',2)->get();
+        return view('rejectDetail_faiz',compact('data'));
+}
+
+    // public function dashboard_reject(){
+    //     return view('rejectDetail_faiz');
+    // }
+
+    // public function dashboard_approved(){
+    //     return view('dashboard_biah_approved');
+    // }
 }

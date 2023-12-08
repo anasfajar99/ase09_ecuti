@@ -272,122 +272,32 @@
                                                 <thead class="bg-light" align="center">
                                                     <tr class="border-0">
                                                         <th class="border-0">No</th>
-                                                        <th class="border-0">Nama Pegawai</th>
-                                                        <th class="border-0">Alasan</th>
-                                                        <th class="border-0">Tanggal Pengajuan</th>
+                                                        <th class="border-0">Nama Karyawan</th>
+                                                        <th class="border-10">Tanggal Pengajuan</th>
+                                                        <th class="border-0">Tanggal Mulai Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
+                                                        <th class="border-0">Alasan</th>
                                                         <th class="border-0">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody align="center">
+                                                    @foreach($data as $d)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>Adzmi </td>
-                                                        <td>Sakit</td>
-                                                        <td>20 Oktober 2023</td>
-                                                        <td>3 Minggu</td>
+                                                        <td>{{$loop->iteration}}</td>
+                                                        <td>{{$d->nama_karyawan}}</td>
+                                                        <td>
+                                                            {{$d->created_at}}
+                                                        </td>
+                                                        <td>{{$d->tanggal_mulai_cuti}}</td>
+                                                        <td>{{$d->lama}}</td>
+                                                        <td>{{$d->alasan}}</td>
                                                         <td>
                                                             <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
                                                         </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Adit</td>
-                                                        <td>Bengkel</td>
-                                                        <td>12 September 2023</td>
-                                                        <td>3 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Faiz</td>
-                                                        <td>Panitia</td>
-                                                        <td>15 Agustus 2023</td>
-                                                        <td>3 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Robiah</td>
-                                                        <td>Pusing</td>
-                                                        <td>28 Juli 2023</td>
-                                                        <td>5 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5</td>
-                                                        <td>Yogi </td>
-                                                        <td>Healing</td>
-                                                        <td>20 Juni 2023</td>
-                                                        <td>3 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>6</td>
-                                                        <td>Fandi</td>
-                                                        <td>Gatau</td>
-                                                        <td>8 Mei 2023</td>
-                                                        <td>1 Bulan</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>7</td>
-                                                        <td>Gilang</td>
-                                                        <td>Rehat</td>
-                                                        <td>13 April 2023</td>
-                                                        <td>2 Minggu</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>8</td>
-                                                        <td>Handaru</td>
-                                                        <td>Party</td>
-                                                        <td>12 Maret 2023</td>
-                                                        <td>3 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>9</td>
-                                                        <td>Sanchez</td>
-                                                        <td>Meeting Luar</td>
-                                                        <td>2 Februari 2023</td>
-                                                        <td>2 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>10</td>
-                                                        <td>Robert</td>
-                                                        <td>Keperluan Pribadi</td>
-                                                        <td>25 Januari 2023</td>
-                                                        <td>1 Hari</td>
-                                                        <td>
-                                                            <a href="{{'/rejectDetail'}}" class="btn btn-danger active">Rejected</a>
-                                                        </td>
-                                                    </tr>
-                                                    <!-- <tr>
-                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">Detail</a></td>
-                                                    </tr> -->
+                                                    </tr>     
+                                                    @endforeach
                                                 </tbody>
                                             </table>
-                                            <!-- <div class="card-body border-top">
-                                            <li><a href="formcuti.html" class="btn btn-primary btn-block">Pending Cuti</a></li>
-                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
