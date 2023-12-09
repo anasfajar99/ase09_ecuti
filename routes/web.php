@@ -27,3 +27,4 @@ Route::get('/dashboard_Hr', [DashboardController::class, 'dashboard_Hr']);
 Route::get('/logout', [LoginController::class,'logout']);
 
 Route::POST('/inputCuti', [CutiController::class,'inputCuti']);
+Route::GET('/terimaCuti/{id}/{status}', [DashboardController::class,'terimaCuti']);
