@@ -92,45 +92,18 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody align="center">
+                                                    @foreach($data as $d)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>Gilang Bangun Ardiansyah</td>
-                                                        <td>Cuti Nikah</td>
-                                                        <td>2 Juli 2023</td>
-                                                        <td>10</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
+                                                        <td>{{ $loop -> iteration }}</td>
+                                                        <td>{{ $d -> id_karyawan}}</td>
+                                                        <td>{{ $d -> alasan }}</td>
+                                                        <td>{{ $d -> tanggal_mulai_cuti }}</td>
+                                                        <td>{{ $d -> lama }}</td>
+                                                        <td><a href="terimaCuti/{{ $d -> id }}/1" class="terima btn btn-success active">Terima</a>
+                                                            <a href="terimaCuti/{{ $d -> id }}/2" class="tolak btn btn-danger active">Tolak</a>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Faiz Restu Cahyadi</td>
-                                                        <td>Cuti Liburan</td>
-                                                        <td>30 Februari 2024</td>
-                                                        <td>12</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>Adzmi Rifal Setyawan</td>
-                                                        <td>Cuti Sakit</td>
-                                                        <td>16 Oktober 2024</td>
-                                                        <td>5</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>Siti Robiah</td>
-                                                        <td>Cuti Hamil</td>
-                                                        <td>10 November 2021</td>
-                                                        <td>34</td>
-                                                        <td><a href="#" class="btn btn-success active">Terima</a>
-                                                            <a href="#" class="btn btn-danger active">Tolak</a>
-                                                        </td>
-                                                    </tr>
+                                                    @endforeach
                                                     <tr>
                                                         <td colspan="9"><a href="#"
                                                                 class="btn btn-outline-light float-right">View
@@ -168,5 +141,6 @@
                         </div>
                     </div>
                 </div>
+                
        
     @endsection

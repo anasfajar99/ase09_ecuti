@@ -70,71 +70,27 @@
                                 <thead class="bg-light">
                                     <tr class="border-0">
                                         <th class="border-0">No</th>
-                                        <th class="border-0">Image</th>
-                                        <th class="border-0">Nama Karyawan</th>
-                                        <th class="border-0">Nomor Karyawan</th>
                                         <th class="border-0">Tanggal Pengajuan</th>
+                                        <th class="border-0">Tanggal Mulai Cuti</th>
                                         <th class="border-0">Jumlah hari</th>
                                         <th class="border-0">Alasan</th>
                                         <th class="border-0">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($data as $d)
                                     <tr>
-                                        <td>1</td>
+                                        <td>{{ $loop -> iteration }}</td>
                                         <td>
-                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                            {{ $d -> created_at }}
                                         </td>
-                                        <td>Handaru </td>
-                                        <td>id000001 </td>
-                                        <td>20 September 2023</td>
-                                        <td>6</td>
-                                        <td>Istri Melahirkan</td>
+                                        <td>{{ $d -> tanggal_mulai_cuti }}</td>
+                                        <td>{{ $d -> lama }}</td>
+                                        <td>{{ $d -> alasan }}</td>
 
                                         <td><span class="badge-dot badge-brand mr-1"></span> </td>
                                     </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>
-                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
-                                        </td>
-                                        <td>Yogi </td>
-                                        <td>id000002 </td>
-                                        <td>12 Oktober 2023</td>
-                                        <td>4</td>
-                                        <td>pindah Rumah</td>
-                                        
-                                        <td><span class="badge-dot badge-success mr-1"></span> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>
-                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
-                                        </td>
-                                        <td>Faiz</td>
-                                        <td>id000003 </td>
-                                        <td>23 Februari 2023</td>
-                                        <td>3</td>
-                                        <td>Ada acara keluarga</td>
-                                        
-                                        <td><span class="badge-dot badge-success mr-1"></span> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>
-                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
-                                        </td>
-                                        <td>Gilang </td>
-                                        <td>id000004 </td>
-                                        <td>3 Januari 2023</td>
-                                        <td>5</td>
-                                        <td>Sakit</td>
-
-                                        <td><span class="badge-dot badge-success mr-1"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="9"><a href="#" class="btn btn-outline-info">View Details</a></td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                             <div class="card-body border-top">

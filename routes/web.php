@@ -27,3 +27,4 @@ Route::get('/dashboard_approved', [DashboardController::class,'dashboard_approve
 Route::get('/dashboard_reject', [DashboardController::class,'dashboard_reject']);
 Route::get('/logout', [LoginController::class,'logout']);
 Route::POST('/inputCuti', [CutiController::class,'inputCuti']);
+Route::get('/terimaCuti/{id}/{status}', [DashboardController::class,'terimaCuti']);

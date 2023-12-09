@@ -25,7 +25,7 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Pending</a>
+                                            <a class="nav-link" href="{{'/dashboard_Hr'}}">Pending</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{'/dashboard_approved'}}">Approve</a>
@@ -44,7 +44,7 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Pending</a>
+                                            <a class="nav-link" href="{{'/dashboard_Hr'}}">Pending</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{'/dashboard_approved'}}">Approve</a>
