@@ -24,6 +24,9 @@ Route::get('/home', [DashboardController::class, 'index']);
 Route::POST('/auth', [LoginController::class, 'auth']);
 Route::get('/form_ajukan_cuti', [DashboardController::class, 'form_ajukan_cuti']);
 Route::get('/dashboard_Hr', [DashboardController::class, 'dashboard_Hr']);
+Route::get('/dashboard_reject', [DashboardController::class, 'dashboard_Hr_reject']);
+Route::get('/dashboard_approved', [DashboardController::class, 'dashboard_Hr_approved']);
+
 Route::get('/logout', [LoginController::class,'logout']);
 
 Route::POST('/inputCuti', [CutiController::class,'inputCuti']);

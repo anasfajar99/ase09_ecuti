@@ -25,14 +25,18 @@ class DashboardController extends Controller
         return view('dashboard_hrd_gilang_pending',compact('data'));
     }
 
-    public function dashboard_Hr_reject(){
-        $data = Listcuti::where('status',1)->get();
-        return view('dashboard_hrd_gilang_pending',compact('data'));
+    public function dashboard_Hr_reject(Request $request){
+        if ($request->session()->has('name')) {
+            $data = Listcuti::where('status',2)->get();
+            return view('dashboard_hrd_gilang_pending',compact('data'));
+        }
     }
 
-    public function dashboard_Hr_approved(){
-        $data = Listcuti::where('status',2)->get();
-        return view('dashboard_hrd_gilang_pending',compact('data'));
+    public function dashboard_Hr_approved(Request $request){
+        if ($request->session()->has('name')) {
+            $data = Listcuti::where('status',1)->get();
+            return view('dashboard_hrd_gilang_pending',compact('data'));
+        }
     }
 
     public function terimaCuti(Request $request){
