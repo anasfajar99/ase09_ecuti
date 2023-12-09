@@ -88,7 +88,7 @@
                                                         <th class="border-0">Alasan</th>
                                                         <th class="border-0">Tanggal Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
-                                                        <th class="border-0">Action</th>
+                                                        <th class="border-0">Keterangan</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody align="center">
@@ -99,12 +99,9 @@
                                                         <td>{{ $d->alasan }}</td>
                                                         <td>{{ $d->created_at }}</td>
                                                         <td>{{ $d->lama }}</td>
-                                                        <td><a href="terimaCuti/{{ $d->id }}/1" class="btn btn-success active">Terima</a>
-                                                            <a href="terimaCuti/{{ $d->id }}/2" class="btn btn-danger active">Tolak</a>
-                                                        </td>
+                                                        <td><span class="badge-dot badge-danger mr-1"></span>Ditolak</td>
                                                     </tr>
                                                     @endforeach
-                                                    
                                                 </tbody>
                                             </table>
                                         </div>
