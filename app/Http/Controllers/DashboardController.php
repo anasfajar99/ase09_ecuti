@@ -20,22 +20,24 @@ class DashboardController extends Controller
         return view('Form_Pengajuan_Cuti_fandi');
     }
 
-    public function dashboard_Hr(){
-        $data = Listcuti::where('status',0)->get();
-        return view('dashboard_hrd_gilang_pending',compact('data'));
+    public function dashboard_Hr(Request $request){
+        if ($request->session()->has('name')) {
+            $data = Listcuti::where('status',0)->get();
+            return view('dashboard_hrd_gilang_pending',compact('data'));
+        }
     }
 
     public function dashboard_Hr_reject(Request $request){
         if ($request->session()->has('name')) {
             $data = Listcuti::where('status',2)->get();
-            return view('dashboard_hrd_gilang_pending',compact('data'));
+            return view('rejectDetail_faiz',compact('data'));
         }
     }
 
     public function dashboard_Hr_approved(Request $request){
         if ($request->session()->has('name')) {
             $data = Listcuti::where('status',1)->get();
-            return view('dashboard_hrd_gilang_pending',compact('data'));
+            return view('dashboard_biah_approved',compact('data'));
         }
     }
 

@@ -24,13 +24,13 @@
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Pending</a>
+                                            <a class="nav-link" href="dashboard_Hr">Pending</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Approve</a>
+                                            <a class="nav-link" href="dashboard_approved">Approve</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html">Reject</a>
+                                            <a class="nav-link" href="dashboard_reject">Reject</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -42,14 +42,14 @@
                                         class="fa fa-fw fa-chart-pie"></i>HRD Dashboard</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Pending</a>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="dashboard_Hr">Pending</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="">Approve</a>
+                                            <a class="nav-link" href="dashboard_approved">Approve</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="pages/listgroup.html">Reject</a>
+                                            <a class="nav-link" href="dashboard_reject">Reject</a>
                                         </li>
                                     </ul>
                                 </div>
