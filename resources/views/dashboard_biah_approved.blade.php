@@ -81,59 +81,24 @@
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th class="border-0">#</th>
-                                                        <th class="border-0">Image</th>
-                                                        <th class="border-0">Nama Pegawai</th>
+                                                        <th class="border-0">Nama Karyawan</th>
                                                         <th class="border-0">Alasan</th>
-                                                        <th class="border-0">Tanggal Pengajuan</th>
+                                                        <th class="border-0">Tanggal Mulai Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
                                                         <th class="border-0">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                @foreach($data as $d)
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Yogi </td>
-                                                        <td>Sakit</td>
-                                                        <td>20 MEI</td>
-                                                        <td>3 Hari</td>
+                                                        <td>{{ $d->id_karyawan }}</td>
+                                                        <td>{{ $d->alasan}}</td>
+                                                        <td>{{ $d->created_at }}</td>
+                                                        <td>{{ $d->lama }}</td>
                                                         <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Ani</td>
-                                                        <td>Melahirkan</td>
-                                                        <td>12 AGUSTUS</td>
-                                                        <td>3 Bulan</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Gilang</td>
-                                                        <td>Sakit</td>
-                                                        <td>23 JANUARI</td>
-                                                        <td>2 Hari</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Handaru</td>
-                                                        <td>Sakit</td>
-                                                        <td>25 OKTOBER</td>
-                                                        <td>1 Hari</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
+                                                    @endforeach
                                                     <tr>
                                                         <td colspan="9"><a href="#" class="btn btn-outline-light float-right">Detail</a></td>
                                                     </tr>
