@@ -57,7 +57,7 @@
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Unapproved Cuti</h5>
+                                        <h5 class="text-muted">Rejected Cuti</h5>
                                         <div class="metric-value d-inline-block">
                                             <h1 class="mb-1">8 Data</h1>
                                         </div>
@@ -83,7 +83,7 @@
                                             <table class="table">
                                                 <thead class="bg-light" align="center">
                                                     <tr class="border-0">
-                                                        <th class="border-0">#</th>
+                                                        <th class="border-0">No</th>
                                                         <th class="border-0">Nama Karyawan</th>
                                                         <th class="border-0">Alasan</th>
                                                         <th class="border-0">Tanggal Cuti</th>
