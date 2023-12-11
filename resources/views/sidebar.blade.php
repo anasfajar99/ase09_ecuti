@@ -12,9 +12,9 @@
                             </li>
                             @if (session('akses') == 1)
                             <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-user"></i>Dasboard</a>
+                                <a class="nav-link" href="{{'/home'}}" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-user"></i>Dasboard</a>
                                 <li class="nav-item">
-                                <a class="nav-link" href="#" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-calendar-alt"></i>Pengajuan Cuti</a>
+                                <a class="nav-link" href="{{'/form_ajukan_cuti'}}" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-calendar-alt"></i>Pengajuan Cuti</a>
                             </li>
                             @elseif (session('akses') == 2)
                             <li class="nav-item active">

@@ -23,21 +23,37 @@ class DashboardController extends Controller
     public function dashboard_Hr(Request $request){
         if ($request->session()->has('name')) {
             $data = Listcuti::where('status',0)->get();
-            return view('dashboard_hrd_gilang_pending',compact('data'));
+            $detail = [
+                'pending' => Listcuti::where('status',0)->count(),
+                'diterima' => Listcuti::where('status',1)->count(),
+                'ditolak' => Listcuti::where('status',2)->count(),
+            ];
+            return view('dashboard_hrd_gilang_pending',compact('data', 'detail'));
         }
     }
 
     public function dashboard_Hr_reject(Request $request){
         if ($request->session()->has('name')) {
             $data = Listcuti::where('status',2)->get();
-            return view('rejectDetail_faiz',compact('data'));
+            $detail = [
+                'pending' => Listcuti::where('status',0)->count(),
+                'diterima' => Listcuti::where('status',1)->count(),
+                'ditolak' => Listcuti::where('status',2)->count(),
+            ];
+            // dd($detail);
+            return view('rejectDetail_faiz',compact('data','detail'));
         }
     }
 
     public function dashboard_Hr_approved(Request $request){
         if ($request->session()->has('name')) {
             $data = Listcuti::where('status',1)->get();
-            return view('dashboard_biah_approved',compact('data'));
+            $detail = [
+                'pending' => Listcuti::where('status',0)->count(),
+                'diterima' => Listcuti::where('status',1)->count(),
+                'ditolak' => Listcuti::where('status',2)->count(),
+            ];
+            return view('dashboard_biah_approved',compact('data','detail'));
         }
     }
 

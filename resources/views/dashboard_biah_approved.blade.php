@@ -21,47 +21,44 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
-                        <div class="row">
+                    <div class="row">
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="text-muted">Jumlah Pengajuan</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">98</h1>
+                                            <h1 class="mb-1">{{ $detail['pending'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span>/Tahun</span>
+                                            <span>/Tahun Ini</span>
                                         </div>
                                     </div>
-                                    <div id="revenue"></div>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Jumlah Disetujui</h5>
+                                        <h5 class="text-muted">Approved Cuti</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">49</h1>
+                                            <h1 class="mb-1">{{ $detail['diterima'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span>/Tahun</span>
+                                            <span>/Tahun Ini</span>
                                         </div>
                                     </div>
-                                    <div id="revenue2"></div>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="text-muted">Jumlah Ditolak</h5>
+                                        <h5 class="text-muted">Unapproved Cuti</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">12</h1>
+                                            <h1 class="mb-1">{{ $detail['ditolak'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span>/Tahun</span>
+                                            <span>/Tahun Ini</span>
                                         </div>
                                     </div>
-                                    <div id="revenue3"></div>
                                 </div>
                             </div>
                         </div>
@@ -78,65 +75,27 @@
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
-                                                <thead class="bg-light">
+                                                <thead class="bg-light" align="center">
                                                     <tr class="border-0">
                                                         <th class="border-0">#</th>
-                                                        <th class="border-0">Image</th>
-                                                        <th class="border-0">Nama Pegawai</th>
+                                                        <th class="border-0">Nama Karyawan</th>
                                                         <th class="border-0">Alasan</th>
-                                                        <th class="border-0">Tanggal Pengajuan</th>
+                                                        <th class="border-0">Tanggal Cuti</th>
                                                         <th class="border-0">Jumlah Hari</th>
-                                                        <th class="border-0">Action</th>
+                                                        <th class="border-0">Keterangan</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody align="center">
+                                                    @foreach($data as $d)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Yogi </td>
-                                                        <td>Sakit</td>
-                                                        <td>20 MEI</td>
-                                                        <td>3 Hari</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
+                                                        <td>{{ $loop->iteration }}</td>
+                                                        <td>{{ $d->id_karyawan }}</td>
+                                                        <td>{{ $d->alasan }}</td>
+                                                        <td>{{ $d->created_at }}</td>
+                                                        <td>{{ $d->lama }}</td>
+                                                        <td><span class="badge-dot badge-success mr-1"></span>Diterima</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-2.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Ani</td>
-                                                        <td>Melahirkan</td>
-                                                        <td>12 AGUSTUS</td>
-                                                        <td>3 Bulan</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-3.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Gilang</td>
-                                                        <td>Sakit</td>
-                                                        <td>23 JANUARI</td>
-                                                        <td>2 Hari</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic-4.jpg" alt="user" class="rounded" width="45"></div>
-                                                        </td>
-                                                        <td>Handaru</td>
-                                                        <td>Sakit</td>
-                                                        <td>25 OKTOBER</td>
-                                                        <td>1 Hari</td>
-                                                        <td><span class="badge-dot badge-success mr-1"></span>Approved </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">Detail</a></td>
-                                                    </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                             <!-- <div class="card-body border-top">

@@ -33,7 +33,7 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Jumlah Pengajuan</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">12 Data</h1>
+                                            <h1 class="mb-1">{{ $detail['pending'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span>/Tahun Ini</span>
@@ -46,7 +46,7 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Approved Cuti</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">8 Data</h1>
+                                            <h1 class="mb-1">{{ $detail['diterima'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span>/Tahun Ini</span>
@@ -59,7 +59,7 @@
                                     <div class="card-body">
                                         <h5 class="text-muted">Unapproved Cuti</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">8 Data</h1>
+                                            <h1 class="mb-1">{{ $detail['ditolak'] }} Data</h1>
                                         </div>
                                         <div class="metric-label d-inline-block float-right text-success font-weight-bold">
                                             <span>/Tahun Ini</span>
